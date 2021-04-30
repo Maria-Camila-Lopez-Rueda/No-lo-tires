@@ -1,0 +1,352 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://acctcdn.msauth.net/images/2_vD0yppaJX3jBnfbHF1hqXQ2.svg);
+    font-size: 1em;
+}
+
+/* FORMULARIO*/
+
+:root{
+    --colorTextos: #49454567;
+}
+
+form h1{
+    text-align: center;
+    font-weight: 700;
+    color: rgba(6, 82, 112);
+}
+
+form{
+    padding: 40px 0;
+    background-image: radial-gradient(rgba(37, 96, 190, 0.6), rgba(4, 8, 61, 0.6)), url(img/imgslide1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form{
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 10px;
+    box-shadow: 1px 1px 10px darkgray;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.colscont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.colcont1, .colcont2{
+    width: 50%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.form .grupo{
+    position: relative;
+    margin: 45px;
+}
+
+input, textarea{
+    background: none;
+    color: #c6c6c6;
+    font-size: 1.125em;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+    color: #5e5d5d;
+}
+
+input:invalid~label{
+    background: #fff;
+    width: 100%;
+    padding: 5px 0;
+}
+
+input:valid, textarea:valid{
+    color: #3b3b3b;
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 1em;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label,
+textarea:focus~label,
+input:valid~label,
+textarea:valid~label {
+    top: -14px;
+    font-size: 0.75em;
+    color: #2196f3;
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #7090d6, #3089dd);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 100%;
+}
+
+::placeholder{
+    visibility: hidden;
+    color: #fff;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder
+{
+    visibility: visible;
+    color: #49454567;
+    transition: 1s ease-in-out color;
+}
+
+.btn-form{
+    border: none;
+    display: block;
+    width: 35%;
+    margin: auto;
+    margin-top: 100px;
+    color: #fff;
+    height: 40px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 5px;
+    bottom: 0;
+}
+
+@media screen and (max-width:900px){
+    .form{
+        width: 80%;
+        max-width: 500px;
+    }
+    .colscont{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .colcont1, .colcont2{
+        width: 90%;
+    }
+    .btn-form{
+        margin-top: 0;
+    }
+    .form .grupo{
+        margin: 30px;
+    }
+}
+
+@media screen and (max-width:450px){
+    .colcont1, .colcont2{
+        width: 100%;
+    }
+    .form{
+        width: 95%;
+    }
+}
+
+/*Portada*/
+
+.container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-image: url(img/portada3.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-cover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, hsla(197, 100%, 50%, 0.24), hsla(0, 0%, 100%, 0.24));
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container-info-cover{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container-info-cover h1{
+    font-size: 3.75em;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.container-info-cover p{
+    color: white;
+    font-size: 1.25em;
+    font-weight: 300;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+/* Sección mapa e info de contacto */
+
+.contenedor-contact{
+    width: 100%;
+    display: flex;
+    background: #F2F2F2;
+}
+
+.contact-info{
+    padding: 0 40px;
+    display: block;
+    margin: auto;
+    height: 100%;
+    width: 80%;
+    
+}
+
+.titulo-contact{
+    font-size: 1.7em;
+    text-align: center;
+    color: rgba(6, 82, 112);
+    margin-bottom: 20px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact a{
+    color: #000;
+}
+
+.contact a:hover{
+    color: #074f97;
+    transition: all 0.5s ease-in;
+}
+
+.icon{
+    font-size: 1.75em;
+    color: rgba(6, 82, 112);
+    display: block;
+    margin: auto;
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+.icon:hover{
+    transform: scale(1.2);
+}
+
+.icona{
+    display: block;
+    margin: auto;
+}
+
+.contact h3{
+    color: rgb(2, 131, 182);
+}
+
+.relleno-contact{
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+.mapa{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+}
+
+.mapa iframe{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.ubicacion{
+    box-shadow: 1px 1px 10px darkgray !important;
+}
+
+@media screen and (max-width: 840px){
+    .mapa{
+        height: 350px;
+    }
+    .contenedor-contact{
+        flex-direction: column;
+    }
+    .contact-info{
+        padding: 80px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .contact-info{
+        padding: 60px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .contact-info{
+        padding: 40px;
+    }
+    .titulo-contact{
+        font-size: 1.4em;
+    }
+    .container-info-cover h1{
+        font-size: 3em;
+    }
+    .container-info-cover p{
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="img/favicon.png" type="img/png">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Julee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>No lo tires</title>
+</head>
+<body>
+
+    <!-- Botón subir -->
+
+    <a id="button"></a>
+
+    <!-- Menú -->
+
+    <header>
+        
+        <div class="header-content">
+        <div class="menu_bar">
+            <button id="burger" class="burger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li class="logo"><a href="index.html"><img loading="lazy" src="img/logo-white.png"></a></li>
+                <li class="uno home"><a href="#"><i class="fas fa-home"></i>Inicio</a></li>
+                <li class="submenu uno">
+                    <a><i class="fas fa-globe-americas"></i>Sobre nosotros<i class="caret fas fa-angle-down"></i></a>
+                    <ul class="children">
+                        <li><a href="#somos">¿Quiénes somos? <i class="far fa-dot-circle"></i></a></li>
+                        <li><a href="#mis">Misión / Visión <i class="far fa-dot-circle"></i></a></li>
+                        <li><a href="#val">Valores <i class="far fa-dot-circle"></i></a></li>
+                    </ul>
+                </li>
+                <li class="submenu uno">
+                    <a><i class="fas fa-rocket"></i>Servicios<i class="caret fas fa-angle-down"></i></a>
+                    <ul class="children">
+                        <li><a href="#servicios"> Conócelos <i class="far fa-dot-circle"></i></a></li>
+                        <li><a href="#recoleccion">Recolección <i class="far fa-dot-circle"></i></a></li>
+                        <li><a href="#distribucion">Distribución <i class="far fa-dot-circle"></i></a></li>
+                    </ul>
+                </li>
+                <li class="uno"><a href="#noticias"><i class="far fa-newspaper"></i>Noticias</a></li>
+                <li class="uno"><a href="contacto.html"><i class="far fa-envelope"></i>Contáctenos</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <!-- Slider manual -->
+
+    <div id="slider1">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+            <div id="overflow">
+                <div class="inner">
+                    <div class="slide slide_1">
+                        <div class="slide-content">
+                            <video id="video" loop autoplay preload muted>
+                                <source src="img/Llanta.mp4" type="video/mp4"/>
+                            </video>                                
+                            <h2 class="titulo" data-aos="zoom-in" data-aos-duration="1500">¿Quieres saber más de nosotros?</h2>
+                            <a href="#somos"><button>Sobre nosotros</button></a>
+                        </div>
+                    </div>
+                    <div class="slide slide_2">
+                        <div class="slide-content">
+                            <h2 class="titulo">¿Quieres conocer nuestros servicios?</h2>
+                            <a href="#servicios"><button>Servicios</button></a>
+                        </div>
+                    </div>
+                    <div class="slide slide_3">
+                        <div class="slide-content">
+                            <h2 class="titulo">Lee más acerca de lo que hacemos</h2>
+                            <a href="#noticias"><button>Noticias</button></a>
+                        </div>
+                    </div>
+                    <div class="slide slide_4">
+                        <div class="slide-content">
+                            <h2 class="titulo">¿Quieres saber más?</h2>
+                            <button onclick="toggle();">¡Sí!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wave">
+                <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                        style="height: 100%; width: 100%;">
+                        <path d="M-2.59,86.15 C146.95,184.82 323.02,5.24 507.56,110.81 L500.00,150.00 L0.00,150.00 Z"
+                            style="stroke: none; fill: #f2f2f2;"></path>
+                    </svg></div>
+            </div>
+        </div>
+        <div id="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
+        <div id="bullets">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
+
+        <!-- POP UP -->
+
+        <div class="trailer">
+            <video src="img/video.mp4" controls="true"></video>
+            <i class="fas fa-times close" onclick="toggle();"></i>
+        </div>
+
+    </div>
+    
+    <!--Sobre nosotros-->
+
+    <main>
+
+        <section class="quienes-somos" id="somos">
+            <div class="contenedor">
+                <h2 class="title">¿Quiénes somos?</h2>
+                <div class="contenedor-somos">
+                    <div class="soy">
+                        <div class="psoy" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <i class="fas fa-quote-left"></i><p>No la tires, nosotros nos encargamos</p><i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="csoy" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <p>No lo tires es una iniciativa que nace ante la necesidad de encontrar soluciones efectivas frente a las problemáticas ambientales, económicas y sociales que se han generado en torno al incorrecto gestionamiento de los residuos producidos por las llantas que llegan al fin de su vida útil, provocando un alto índice de contaminación, al efectuarse la acumulación de este desecho en zonas urbanas y/o rurales a las que se acceden con frecuencia, ocasionando perjuicios a la salud pública y al medio ambiente que se ve directamente involucrado. 
+                            <br><br>
+                            Más que una empresa, somos una alternativa que permitirá la adecuada disposición de la materia prima que se obtiene de las llantas, asegurándonos que esta no sea utilizada posteriormente para fines automovilísticos, si no que se efectúen en la transformación para la creación de productos manufacturados, al proveer dicho material con los respectivos lineamientos establecidos para el propósito de mitigar esta problemática.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Misión/Visión -->
+
+        <div class="all-sobre-nosotros" id="mis">
+            <section class="contenedor sobre-nosotros" >
+                <div class="contenedor-sobre-nosotros">
+                    <img loading="lazy" src="img/somos.png" alt="" class="imagen-about-us" data-aos="fade-right">
+                    <div class="contenido-textos" data-aos="fade-left">
+                        <h3>Misión</h3>
+                        <p>Buscamos generar bienestar a la comunidad al ofrecer servicios de confianza que les permitan tener una gestión eficiente de los residuos generados por las llantas, dándoles un uso sustentable y prolongado.</p>
+                        <h3>Visión</h3>
+                        <p>Para el 2030 No lo tires será una empresa de amplio reconocimiento a nivel nacional, líder en la recolección y distribución de llantas usadas y el aprovechamiento de sus componentes para el aporte al cuidado del medio ambiente.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Valores -->
+
+        <section class="valores" id="val">
+            <div class="contenedor">
+                <div class="cont-tittle-valor">
+                    <h2 class="title">Valores</h2>
+                </div>
+                <div class="contenedor-valores">
+                    <div class="valor" data-aos="flip-right">
+                        <h3>Honestidad</h3>
+                        <p>La transparencia y sinceridad con nuestros clientes es primordial y necesaria</p>
+                    </div>
+                    <div class="valor" data-aos="flip-right">
+                        <h3>Pasión</h3>
+                        <p>Somos una organización con un gran entusiasmo por la labor que llevamos a cabo</p>
+                    </div>
+                    <div class="valor" data-aos="flip-right">
+                        <h3>Integridad</h3>
+                        <p>Estamos comprometidos con el respeto al medio ambiente y el bienestar de las personas</p>
+                    </div>
+                    <div class="valor" data-aos="flip-right">
+                        <h3>Excelencia</h3>
+                        <p>Prestamos servicios de gran calidad, y contamos con un personal altamente calificado</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor tituloservicio" id="servicios">
+            <div class="tservicio">
+                <h2 class="title titleservicio">Nuestros servicios</h2>
+            </div>
+        </section>
+
+        <!-- Servicios Slider automático y manual -->
+
+        <div class="container-slider">
+            <div class="slider" id="slider">
+                <div class="slider__section">
+                    <div class="img1 imgs">
+                        <h2 class="tslide2 ts2">Servicios</h2>
+                        <div class="ps2">
+                            <p>Nuestros servicios se concentran en recolección de llantas usadas, y su posterior distribución para la reutilización sostenible</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__section">
+                    <div class="img2 imgs">
+                        <h2 class="tslide2 ts2">Recolección</h2>
+                        <div class="service-s">
+                            <p>Recogemos todo tipo de llantas de caucho, que han terminado su ciclo de vida útil</p>
+                            <a href="#recoleccion"><button class="bs2">Dime más</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__section">
+                    <div class="img3 imgs">
+                        <h2 class="tslide2 ts2">Distribución</h2>
+                        <div class="service-s">
+                            <p>Realizamos la distribución del material para su uso en fines no automovilísticos</p>
+                            <a href="#distribucion"><button class="bs2">Dime más</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__section">
+                    <div class="img4 imgs">
+                        <h2 class="tslide2 ts22">¡Comprometidos contigo!</h2>
+                        <div class="ps2 ps22">
+                            <p>En No lo tires tenemos un fuerte compromiso por el cuidado del medio ambiente y la mitigación de los daños causados por la mala gestión de residuos provenientes de llantas usadas</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="slider__btn slider__btn--right" id="btn-right">&#62</div>
+            <div class="slider__btn slider__btn--left" id="btn-left">&#60</div>
+        </div>
+        
+
+        <section class="servicios">
+            <div class="tlinea">
+                <p id="typewriter"></p>
+            </div>
+            <div class="recoleccion" id="recoleccion">
+                <div class="recolimg">
+                    <img loading="lazy" src="img/recol.jpg" alt="">
+                </div>
+                <div class="recolinfo">
+                    <h2 class="title tser">Recolección</h2>
+                    <p class="rp1">Para solicitar el servicio de recolección debes realizar la petición con al menos dos días de anticipación, se reciben llantas de diversos calibres hasta un monto máximo de 100 unidades por entrega. Solo debes seguir los siguientes pasos: </p>
+                    <div class="recolp">
+                        <span>1</span><p>Comunícate con nosotros a través de nuestros medios de contacto o diligencia el formato en línea</p>
+                    </div>
+                    <div class="recolp">
+                        <span>2</span><p>Recibe la confirmación de uno de nuestros asesores y programa la fecha de entrega</p>
+                    </div>
+                    <div class="recolp">
+                        <span>3</span><p>Realiza la entrega de las llantas en los puntos asignados o solicita el servicio de recolección</p>
+                    </div>
+                    <div class="recolp">
+                        <span>4</span><p>Diligencia el registro de entrega de llantas usadas</p>
+                    </div>
+                    <div class="buttoninfo">
+                        <a href="contacto.html#form"><button>Solicítalo ahora</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="distribucion" id="distribucion">
+                <div class="recolimg">
+                    <img loading="lazy" src="img/distr.jpg" alt="">
+                </div>
+                <div class="recolinfo">
+                    <h2 class="title tser">Distribución</h2>
+                    <p class="rp1">A través de la distribución de este material nos compromentemos al uso por medio de personas o entidades que busquen su aprovechamiento y reutilización idónea. Solo debes seguir los siguientes pasos: </p>
+                    <div class="recolp">
+                        <span>1</span><p>Comunícate con nosotros a través de nuestros medios de contacto o diligencia el formato en línea</p>
+                    </div>
+                    <div class="recolp">
+                        <span>2</span><p>Establece con uno de nuestros asesores el monto, modo de entrega y otros datos requeridos</p>
+                    </div>
+                    <div class="recolp">
+                        <span>3</span><p>Especifica el uso y transformación del material suministrado. Recuerda <b>NO las uses con fines automovilísticos</b></p>
+                    </div>
+                    <div class="recolp">
+                        <span>4</span><p>Diligencia el formato requerido al momento de recibir las llantas</p>
+                    </div>
+                    <div class="buttoninfo">
+                        <a href="contacto.html#form"><button>Solicítalo ahora</button></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Noticias -->
+
+        <section class="noticias" id="noticias">
+            <div class="contenedor">
+                <h2 class="title">Noticias</h2>
+                <div class="cont-noticias">
+                    <div class="cont-ntc" data-aos="zoom-out" data-aos-duration="2000">
+                        <img loading="lazy" class="img" src="img/ntc1.jpg" alt="Muros de conteción con llantas, alternativas de material de construcción y obras de ingeniería civil" longDesc="http://dev2.unal.edu.co/detalle/llantas-para-elaborar-muros-de-contencion-evitan-deslizamientos">
+                        <div class="hover-ntc hover-img">
+                            <img loading="lazy" class="img imgno" src="img/ntc1.jpg" alt="Muros de conteción con llantas, alternativas de material de construcción y obras de ingeniería civil" longDesc="http://dev2.unal.edu.co/detalle/llantas-para-elaborar-muros-de-contencion-evitan-deslizamientos">
+                            <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="cont-ntc" data-aos="zoom-out" data-aos-duration="2000">
+                        <img loading="lazy" class="img" src="img/ntc2.jpg" alt="Obras de arte, calzado y muebles, algunos posibles usos de la reutilización de este material" longDesc="https://www.laopinion.com.co/cucuta/convierte-las-llantas-en-obras-de-arte">
+                        <div class="hover-ntc hover-img">
+                            <img loading="lazy" class="img imgno" src="img/ntc2.jpg" alt="Obras de arte, calzado y muebles, algunos posibles usos de la reutilización de este material" longDesc="https://www.laopinion.com.co/cucuta/convierte-las-llantas-en-obras-de-arte">
+                            <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="cont-ntc" data-aos="zoom-out" data-aos-duration="2000">
+                        <img loading="lazy" class="img" src="img/ntc3.jpg" alt="¿Qué consecuencias puede traer no hacer un manejo adecuado de estos residuos?" longDesc="https://ecogreenequipment.com/es/conoce-cuales-peligros-pueden-ocacionar-los-neumaticos-fuera-de-uso-nfu/">
+                        <div class="hover-ntc hover-img">
+                            <img loading="lazy" class="img imgno" src="img/ntc3.jpg" alt="¿Qué consecuencias puede traer no hacer un manejo adecuado de estos residuos?" longDesc="https://ecogreenequipment.com/es/conoce-cuales-peligros-pueden-ocacionar-los-neumaticos-fuera-de-uso-nfu/">
+                            <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="container-img">
+            <i class='fas fa-times xntc'></i>
+            <div class="cont-notip">
+                <img loading="lazy" src="" alt="" class="img-show">
+                <div class="text-notip">
+                    <p class="copy"></p>
+                    <div class="btn-notip">
+                        <a class="link" href=""><button class="buttonntc">Leer más</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </main>
+
+    <!--Footer-->
+    
+    <div class="container-footer">
+        <footer>
+            <div class="logo-footer">
+                <img loading="lazy" src="img/logo-llanta.png" alt="">
+            </div>
+            <div class="redes-footer">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter icon-redes-footer"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+            <hr>
+            <h4>2021 | Desarrolladores María Camila López & Daniel Mateo Gómez | &copy; Todos los derechos reservados</h4>
+        </footer>
+    </div>
+
+    <!-- PRELOADER -->
+
+    <div class="loader-wrapper">
+        <div class="loading-window">
+            <div class="car">
+                <div class="strike"></div>
+                <div class="strike strike2"></div>
+                <div class="strike strike3"></div>
+                <div class="strike strike4"></div>
+                <div class="strike strike5"></div>
+                <div class="car-detail spoiler"></div>
+                <div class="car-detail back"></div>
+                <div class="car-detail center"></div>
+                <div class="car-detail center1"></div>
+                <div class="car-detail front"></div>
+                <div class="car-detail wheel"></div>
+                <div class="car-detail wheel wheel2"></div>
+            </div>
+        
+            <div class="text">
+                <span>Loading</span><span class = "dots">...</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js”></script>
+    <script src="script.js"></script>
+</body>
+</html>

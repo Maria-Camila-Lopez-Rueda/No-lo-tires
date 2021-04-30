@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="img/favicon.png" type="img/png">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Julee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>No lo tires</title>
+</head>
+<body>
+
+    <!-- Botón subir -->
+
+    <a id="button"></a>
+
+    <!-- Menú -->
+
+    <header>
+        <div class="header-content">
+            <div class="menu_bar">
+                <button id="burger" class="burger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+            </div>
+        <nav>
+            <ul class="menu">
+                <li class="logo"><a href="index.html"><img src="img/logo-white.png"></a></li>
+                <li class="uno home"><a href="index.html"><i class="fas fa-home"></i>Inicio</a></li>
+                <li class="submenu uno">
+                    <a><i class="fas fa-globe-americas"></i>Sobre nosotros<i class="caret fas fa-angle-down"></i></a>
+                    <ul class="children">
+                        <li><a href="index.html#somos">¿Quiénes somos? <i class="far fa-dot-circle"></i></a></li>
+                        <li><a href="index.html#mis">Misión / Visión <i class="far fa-dot-circle"></i></a></li>
+                        <li><a href="index.html#val">Valores <i class="far fa-dot-circle"></i></a></li>
+                    </ul>
+                </li>
+                <li class="submenu uno">
+                    <a><i class="fas fa-rocket"></i>Servicios<i class="caret fas fa-angle-down"></i></a>
+                    <ul class="children">
+                        <li><a href="index.html#servicios"> Conócelos <i class="far fa-dot-circle"></i></a></li>
+                        <li><a href="index.html#recoleccion">Recolección <i class="far fa-dot-circle"></i></a></li>
+                        <li><a href="index.html#distribucion">Distribución <i class="far fa-dot-circle"></i></a></li>
+                    </ul>
+                </li>
+                <li class="uno"><a href="index.html#noticias"><i class="far fa-newspaper"></i>Noticias</a></li>
+                <li class="uno"><a href="#"><i class="far fa-envelope"></i>Contáctenos</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <!-- PORTADA -->
+
+    <div class="container-cover">
+        <div class="container-info-cover">
+            <h1 data-aos="zoom-in" data-aos-duration="1500">Contáctanos</h1>
+            <p>Nuestro servicio está al alcance de tus manos. ¡Llámanos!</p>
+        </div>
+    </div>
+    
+    <!-- Sección mapa e info de contacto -->
+    
+    <div class="contenedor-contact">
+        <div class="contact-info">
+            <h2 class="titulo-contact">Contáctanos por los siguientes medios</h2>
+            <div class="contact" data-aos="fade-right" data-aos-duration="2000">
+                <i class="fas fa-map-marker-alt icon"></i>
+                <div class="relleno-contact">
+                    <h3>Ubicación</h3>
+                    <p>Centro Comercial La Central</p>
+                </div>
+            </div>
+            <div class="contact" data-aos="fade-right" data-aos-duration="2000">
+                <a class="icona" href="tel:+573252596345"><i class="fas fa-phone icon"></i></a>
+                <div class="relleno-contact">
+                    <h3>Teléfono</h3>
+                    <p><a href="tel:+573252596345">+573252596345</a></p>
+                </div>
+            </div>
+            <div class="contact" data-aos="fade-right" data-aos-duration="2000">
+                <a class="icona" href="mailto:nolotires@gmail.com" target="_blank"><i class="fas fa-envelope-open-text icon"></i></a>
+                <div class="relleno-contact">
+                    <h3>Correo</h3>
+                    <p><a class="mail" href="mailto:nolotires@gmail.com" target="_blank">nolotires@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="contact" data-aos="fade-right" data-aos-duration="2000">
+                <i class="far fa-clock icon"></i>
+                <div class="relleno-contact">
+                    <h3>Horario</h3>
+                    <p>Lunes a Viernes de 8:00am a 4:00pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1885594503096!2d-75.5483024!3d6.238861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442866357dd023%3A0x4e989f2bd150983a!2sCentro%20Comercial%20La%20Central!5e0!3m2!1ses!2sco!4v1619662620367!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            
+        </div>
+    </div>
+
+    <!-- formulario -->
+
+    <form action="https://formspree.io/f/mjvjggzo" method="POST" id="form" target="_blank">
+        <div class="form" data-aos="fade-zoom-in"
+        data-aos-delay="300"
+        data-aos-offset="0"
+        data-aos-duration="1500">
+            <h1>Contacta con nosotros</h1>
+            <div class="colscont">
+                <div class="colcont1">
+                    <div class="grupo">
+                        <input type="text" name="nombre" id="name" placeholder="Pedrito" required><span class="barra"></span>
+                        <label for="">Nombre</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="apellido" id="name" placeholder="Pérez" required><span class="barra"></span>
+                        <label for="">Apellido</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="tel"  pattern="\b\d{10}|\b\d{7}" name="teléfono" id="name" placeholder="Ej: 3124567890; 2563205" title="Ingresa un número de teléfono móvil o fijo válido, sin espacios, guiones, letras o caracteres especiales." required><span class="barra"></span>
+                        <label for="">Teléfono</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="email" name="correo" id="name" placeholder="Ej: pedrito@ejemplo.com" required><span class="barra"></span>
+                        <label for="">Email</label>
+                    </div>
+                </div>
+    
+                <div class="colcont2">
+                    <div class="grupo">
+                        <textarea rows="6" type="text" name="mensaje" id="name" placeholder="¿Qué servicio quieres solicitar?" required></textarea><span class="barra"></span>
+                        <label for="">Mensaje</label>
+                    </div>
+                    <a href="contacto.html"><button class="btn-form" type="submit">Enviar</button></a>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <!--Footer-->
+
+    <div class="container-footer">
+        <footer>
+            <div class="logo-footer">
+                <img loading="lazy" src="img/logo-llanta.png" alt="">
+            </div>
+            <div class="redes-footer">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter icon-redes-footer"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+            <hr>
+            <h4>2021 | Desarrolladores María Camila López & Daniel Mateo Gómez | &copy; Todos los derechos reservados</h4>
+        </footer>
+    </div>
+
+    <!-- PRELOADER -->
+
+    <div class="loader-wrapper">
+        <div class="loading-window">
+            <div class="car">
+                <div class="strike"></div>
+                <div class="strike strike2"></div>
+                <div class="strike strike3"></div>
+                <div class="strike strike4"></div>
+                <div class="strike strike5"></div>
+                <div class="car-detail spoiler"></div>
+                <div class="car-detail back"></div>
+                <div class="car-detail center"></div>
+                <div class="car-detail center1"></div>
+                <div class="car-detail front"></div>
+                <div class="car-detail wheel"></div>
+                <div class="car-detail wheel wheel2"></div>
+            </div>
+        
+            <div class="text">
+                <span>Loading</span><span class = "dots">...</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js”></script>
+    <script src="script.js"></script>
+</body>
+</html>
